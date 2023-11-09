@@ -1,5 +1,5 @@
 
-public class Account {
+public class Account implements InterfaceBankAccount{
 
 	// class variables
 		String accountname;
@@ -63,8 +63,12 @@ public class Account {
 	    	return balance;
 	    }
 	    
+            public String getBankName() {
+                return InterfaceBankAccount.BANK;
+            }//end method getBankName
+    
 	    //print method 
 	    public void print() {
-	        System.out.println(accountname + " " + accountnum + " " + balance);
+	        System.out.println(getBankName() + accountname + " " + accountnum + " " + balance + "lorem ipsum");
 	      }
 	}
